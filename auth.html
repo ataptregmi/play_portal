@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | RetroGamingSphere</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">R</span>
+          <span class="brand-text">RetroGamingSphere</span>
+          <span class="brand-tag">REGAS</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="epic-moments.html">Epic Moments</a>
+          <a class="nav-link" href="blogs.html">Blogs</a>
+          <a class="nav-link" href="leaderboard.html">Leaderboard</a>
+          <a class="nav-link active" href="auth.html">Login</a>
+          <a class="nav-link nav-cta" href="#signup">Signup</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page auth-page">
+      <section class="auth-card" id="login">
+        <div class="auth-header">
+          <p class="eyebrow">Welcome back</p>
+          <h1>Log in to REGAS</h1>
+          <p class="hero-subtitle">Pick up where you left off in the community hub.</p>
+        </div>
+        <form class="auth-form" data-auth-form="login">
+          <label for="login-email">
+            Email
+            <input id="login-email" name="email" type="email" placeholder="you@regas.gg" autocomplete="email" required />
+          </label>
+          <label for="login-password">
+            Password
+            <input id="login-password" name="password" type="password" placeholder="********" autocomplete="current-password" required />
+          </label>
+          <label class="auth-checkbox" for="login-remember">
+            <input id="login-remember" name="remember" type="checkbox" />
+            Remember me on this device
+          </label>
+          <div class="form-message" data-auth-message="login" aria-live="polite"></div>
+          <button type="submit" class="btn btn-gradient">Log in</button>
+          <button type="button" class="btn btn-outline" data-auth-action="discord">Continue with Discord</button>
+        </form>
+        <p class="form-note">
+          New here? <a class="inline-link" href="#signup">Create an account</a>.
+        </p>
+        <p class="form-note">
+          Forgot password? <a class="inline-link" href="#" data-auth-action="reset">Reset it</a>.
+        </p>
+      </section>
+
+      <section class="auth-card" id="signup">
+        <div class="auth-header">
+          <p class="eyebrow">Join the squad</p>
+          <h1>Create your REGAS ID</h1>
+          <p class="hero-subtitle">Save clips, track stats, and climb the leaderboard.</p>
+        </div>
+        <form class="auth-form" data-auth-form="signup">
+          <label for="signup-name">
+            Display name
+            <input id="signup-name" name="name" type="text" placeholder="Valkyrie Blaze" autocomplete="name" required />
+          </label>
+          <label for="signup-handle">
+            Gamer tag
+            <input id="signup-handle" name="handle" type="text" placeholder="@valkyrie" autocomplete="nickname" required />
+          </label>
+          <label for="signup-email">
+            Email
+            <input id="signup-email" name="email" type="email" placeholder="you@regas.gg" autocomplete="email" required />
+          </label>
+          <label for="signup-password">
+            Password
+            <input id="signup-password" name="password" type="password" placeholder="Minimum 6 characters" autocomplete="new-password" required />
+          </label>
+          <label for="signup-confirm">
+            Confirm password
+            <input id="signup-confirm" name="confirm" type="password" placeholder="Repeat password" autocomplete="new-password" required />
+          </label>
+          <div class="form-message" data-auth-message="signup" aria-live="polite"></div>
+          <button type="submit" class="btn btn-gradient">Create account</button>
+        </form>
+        <p class="form-note">
+          Already have an account? <a class="inline-link" href="#login">Log in</a>.
+        </p>
+        <p class="form-note">
+          By continuing you agree to the REGAS community guidelines.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <h3>RetroGamingSphere</h3>
+        <p>All-in-One Platform for Gamers</p>
+      </div>
+      <div class="footer-links">
+        <a href="epic-moments.html">Epic Moments</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="profile.html">Profile</a>
+      </div>
+      <p class="footer-note">Built for gamers, by gamers. (c) 2026 REGAS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

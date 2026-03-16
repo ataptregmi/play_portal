@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile | RetroGamingSphere</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="profile" data-requires-auth="true">
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">R</span>
+          <span class="brand-text">RetroGamingSphere</span>
+          <span class="brand-tag">REGAS</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="epic-moments.html">Epic Moments</a>
+          <a class="nav-link" href="blogs.html">Blogs</a>
+          <a class="nav-link" href="leaderboard.html">Leaderboard</a>
+          <a class="nav-link" href="auth.html">Login</a>
+          <a class="nav-link nav-cta" href="auth.html#signup">Signup</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="profile-hero">
+        <div class="profile-avatar" data-profile-avatar>VB</div>
+        <div class="profile-details">
+          <p class="eyebrow">Gamer Profile</p>
+          <h1 data-profile-handle>@valkyrie</h1>
+          <p class="hero-subtitle" data-profile-tagline>Competitive flex player. Highlight hunter. Team strategist.</p>
+          <div class="profile-badges">
+            <span class="badge">Rank #1</span>
+            <span class="badge">12,340 pts</span>
+            <span class="badge" data-profile-joined>Joined Jan 2025</span>
+          </div>
+        </div>
+        <div class="profile-actions">
+          <button class="btn btn-gradient">Edit Profile</button>
+          <button class="btn btn-outline">Upload Clip</button>
+        </div>
+      </section>
+
+      <section class="profile-grid">
+        <div class="profile-card">
+          <h3>Stats</h3>
+          <div class="stat-list">
+            <div>
+              <span>Total uploads</span>
+              <strong>248</strong>
+            </div>
+            <div>
+              <span>Total likes</span>
+              <strong>48,920</strong>
+            </div>
+            <div>
+              <span>Leaderboard rank</span>
+              <strong>#1</strong>
+            </div>
+          </div>
+        </div>
+        <div class="profile-card">
+          <h3>Recent clips</h3>
+          <ul class="mini-list">
+            <li>Crimson Rush Finale</li>
+            <li>Portal dash triple pick</li>
+            <li>Zero-Death Speedrun</li>
+          </ul>
+        </div>
+        <div class="profile-card">
+          <h3>Blogs & guides</h3>
+          <ul class="mini-list">
+            <li>How to read enemy tempo</li>
+            <li>Ultimate rotation guide</li>
+            <li>Operator synergy toolkit</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Your highlights</h2>
+          <p>Clips and guides shared by @valkyrie.</p>
+        </div>
+        <div class="clip-feed">
+          <article class="clip-card">
+            <div class="clip-media">Thumbnail</div>
+            <div class="clip-info">
+              <h3>Zero-Death Speedrun</h3>
+              <p>by @valkyrie</p>
+              <div class="clip-meta">
+                <span>Likes 5.1k</span>
+                <span>Comments 611</span>
+                <span>Rating 9.9</span>
+              </div>
+            </div>
+            <div class="clip-actions">
+              <button class="chip">Like</button>
+              <button class="chip">Comment</button>
+              <button class="chip">Share</button>
+            </div>
+          </article>
+          <article class="clip-card">
+            <div class="clip-media">Thumbnail</div>
+            <div class="clip-info">
+              <h3>Portal dash triple pick</h3>
+              <p>by @valkyrie</p>
+              <div class="clip-meta">
+                <span>Likes 3.9k</span>
+                <span>Comments 402</span>
+                <span>Rating 9.4</span>
+              </div>
+            </div>
+            <div class="clip-actions">
+              <button class="chip">Like</button>
+              <button class="chip">Comment</button>
+              <button class="chip">Share</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <h3>RetroGamingSphere</h3>
+        <p>All-in-One Platform for Gamers</p>
+      </div>
+      <div class="footer-links">
+        <a href="epic-moments.html">Epic Moments</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="profile.html">Profile</a>
+      </div>
+      <p class="footer-note">Built for gamers, by gamers. (c) 2026 REGAS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

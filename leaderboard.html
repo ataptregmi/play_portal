@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard | RetroGamingSphere</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">R</span>
+          <span class="brand-text">RetroGamingSphere</span>
+          <span class="brand-tag">REGAS</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="epic-moments.html">Epic Moments</a>
+          <a class="nav-link" href="blogs.html">Blogs</a>
+          <a class="nav-link active" href="leaderboard.html">Leaderboard</a>
+          <a class="nav-link" href="auth.html">Login</a>
+          <a class="nav-link nav-cta" href="auth.html#signup">Signup</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="page-hero">
+        <div>
+          <p class="eyebrow">Leaderboard</p>
+          <h1>Community rankings and top performers</h1>
+          <p class="hero-subtitle">
+            Ranked by total clip likes, uploads, and engagement.
+          </p>
+        </div>
+        <div class="page-actions">
+          <button class="btn btn-gradient">Season stats</button>
+          <button class="btn btn-outline">View rewards</button>
+        </div>
+      </section>
+
+      <section class="leaderboard-table">
+        <div class="leaderboard-row header">
+          <span>Rank</span>
+          <span>Username</span>
+          <span>Total points</span>
+          <span>Best clip</span>
+        </div>
+        <div class="leaderboard-row top">
+          <span>#1</span>
+          <span>@valkyrie</span>
+          <span>12,340 pts</span>
+          <span>Zero-Death Speedrun</span>
+        </div>
+        <div class="leaderboard-row top">
+          <span>#2</span>
+          <span>@neonblade</span>
+          <span>11,980 pts</span>
+          <span>Crimson Rush Finale</span>
+        </div>
+        <div class="leaderboard-row top">
+          <span>#3</span>
+          <span>@ghostbyte</span>
+          <span>10,450 pts</span>
+          <span>Hyperlane Ambush</span>
+        </div>
+        <div class="leaderboard-row">
+          <span>#4</span>
+          <span>@sparkshift</span>
+          <span>9,820 pts</span>
+          <span>Payload Save</span>
+        </div>
+        <div class="leaderboard-row">
+          <span>#5</span>
+          <span>@arcstrike</span>
+          <span>9,210 pts</span>
+          <span>Neo arena no-hit run</span>
+        </div>
+        <div class="leaderboard-row">
+          <span>#6</span>
+          <span>@riftwalker</span>
+          <span>8,990 pts</span>
+          <span>Skyline triple stack clutch</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <h3>RetroGamingSphere</h3>
+        <p>All-in-One Platform for Gamers</p>
+      </div>
+      <div class="footer-links">
+        <a href="epic-moments.html">Epic Moments</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="profile.html">Profile</a>
+      </div>
+      <p class="footer-note">Built for gamers, by gamers. © 2026 REGAS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
