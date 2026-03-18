@@ -9,10 +9,10 @@ if (navToggle && navLinks) {
 }
 
 const storageKeys = {
-  users: "regasUsers",
-  session: "regasSession",
-  sessionTemp: "regasSessionTemp",
-  authStorage: "regasAuthStorage",
+  users: "Play PortalUsers",
+  session: "Play PortalSession",
+  sessionTemp: "Play PortalSessionTemp",
+  authStorage: "Play PortalAuthStorage",
 };
 
 const readJson = (storage, key) => {
@@ -204,7 +204,7 @@ const checkHandleAvailability = async (handle) => {
   return { available: !taken, reason: "That gamer tag is taken." };
 };
 
-const supabaseConfig = window.REGAS_SUPABASE || {};
+const supabaseConfig = window.PLAYPORTAL_SUPABASE || {};
 const supabaseEnabled =
   supabaseConfig.enabled !== false &&
   supabaseConfig.url &&
@@ -216,7 +216,7 @@ let supabaseClient = null;
 const getSupabaseClient = () => {
   if (!supabaseEnabled) return null;
   const preferred = getPreferredStorage();
-  if (!supabaseClient || supabaseClient._regasStorage !== preferred.type) {
+  if (!supabaseClient || supabaseClient._playPortalStorage !== preferred.type) {
     supabaseClient = window.supabase.createClient(
       supabaseConfig.url,
       supabaseConfig.anonKey,
@@ -227,7 +227,7 @@ const getSupabaseClient = () => {
         },
       }
     );
-    supabaseClient._regasStorage = preferred.type;
+    supabaseClient._playPortalStorage = preferred.type;
   }
   return supabaseClient;
 };
@@ -284,7 +284,7 @@ const buildSessionUser = (user) => {
   const metadata = user.user_metadata || {};
   return {
     id: user.id,
-    name: metadata.name || metadata.full_name || "REGAS Player",
+    name: metadata.name || metadata.full_name || "Play Portal Player",
     handle: metadata.handle || "@player",
     email: user.email,
     joinedAt: user.created_at || new Date().toISOString(),
@@ -339,7 +339,7 @@ const fetchSupabaseProfile = async (user) => {
 
   return {
     id: user.id,
-    name: data.name || user.user_metadata?.name || "REGAS Player",
+    name: data.name || user.user_metadata?.name || "Play Portal Player",
     handle: data.handle || user.user_metadata?.handle || "@player",
     email: user.email,
     joinedAt: data.joined_at || user.created_at || new Date().toISOString(),
@@ -847,5 +847,6 @@ if (reels.length > 0) {
     { passive: true }
   );
 }
+
 
 

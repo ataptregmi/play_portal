@@ -3,14 +3,14 @@ const { test, expect } = require('@playwright/test');
 const demoUser = {
   name: 'Nova Striker',
   handle: '@novastriker',
-  email: 'nova@regas.gg',
+  email: 'nova@Play Portal.gg',
   password: 'secret123',
   joinedAt: '2026-03-16T00:00:00.000Z',
 };
 
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => {
-    window.REGAS_SUPABASE = { enabled: false };
+    window.PLAYPORTAL_SUPABASE = { enabled: false };
   });
   await page.goto('/index.html');
   await page.evaluate(() => {
@@ -42,7 +42,7 @@ test('signup creates an account and lands on profile', async ({ page }) => {
 test('login works for an existing account', async ({ page }) => {
   await page.goto('/auth.html');
   await page.evaluate((user) => {
-    localStorage.setItem('regasUsers', JSON.stringify([user]));
+    localStorage.setItem('Play PortalUsers', JSON.stringify([user]));
   }, demoUser);
 
   const loginForm = page.locator('[data-auth-form="login"]');
@@ -72,7 +72,7 @@ test('shows placeholders for discord login and password reset', async ({ page })
 test('logout clears the session and returns home', async ({ page }) => {
   await page.goto('/index.html');
   await page.evaluate((user) => {
-    localStorage.setItem('regasSession', JSON.stringify(user));
+    localStorage.setItem('Play PortalSession', JSON.stringify(user));
   }, {
     name: demoUser.name,
     handle: demoUser.handle,
@@ -84,6 +84,7 @@ test('logout clears the session and returns home', async ({ page }) => {
   await page.getByRole('button', { name: 'Logout' }).click();
   await expect(page).toHaveURL(/index\.html/);
 
-  const session = await page.evaluate(() => localStorage.getItem('regasSession'));
+  const session = await page.evaluate(() => localStorage.getItem('Play PortalSession'));
   expect(session).toBeNull();
 });
+
